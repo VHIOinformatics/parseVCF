@@ -53,7 +53,7 @@ To check the help of the main script:
 
 Example to run the program on tumor-only results on genome hg38 filtering variants with VAF < 0.05, keeping only variants with FILTER "PASS" or "germline" and keeping all values of the SnpEff Annotation_Impact field:
 
-> singularity run -H $PWD:/home/ -B $sarek_results_dir:/home/results_dir/ vcf.sif python3 parseVCF/scripts/parse_variants.py --samples $samples --path results_dir/ --genome hg38 --filter-vaf 0.05 --filters "PASS,germline" --IncludeLowImpact --project $SLURM_JOB_NAME --tumor_only
+> singularity run -H $PWD:/home/ -B $sarek_results_dir:/home/results_dir/ vcf.sif python3 parseVCF/scripts/parse_variants.py --samples $samples --path results_dir/ --genome hg38 --filter-vaf 5 --filters "PASS,germline" --IncludeLowImpact --project $SLURM_JOB_NAME --tumor_only
 
 
 
